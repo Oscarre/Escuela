@@ -181,9 +181,9 @@ class CodeIgniter
 	public function initialize()
 	{
 		// Set default locale on the server
-	//	if( function_exists('locale_set_default')):
+	
 		locale_set_default($this->config->defaultLocale ?? 'en');
-//	endif;
+
 		// Set default timezone on the server
 		date_default_timezone_set($this->config->appTimezone ?? 'UTC');
 

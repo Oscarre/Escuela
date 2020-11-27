@@ -36,6 +36,9 @@ $routes->get('/', 'Home::index');
 $routes->group('api', ['namespace' => 'App\Controllers\API'], function($routes){
 
 	$routes->get('profesor', 'Profesor::index');
+
+	//creando rutas
+	$routes->post('profesor/create', 'Profesor::create');
 });
 
 /**
