@@ -32,7 +32,8 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-
+//alumno: Oscar Rene Escolero Ramirez
+//codigo: u20151157
 //creacion de Redireccion   
 //http://localhost:8080/api/profesor
 $routes->group('api', ['namespace' => 'App\Controllers\API'], function($routes){
@@ -84,6 +85,20 @@ $routes->group('api/v3', ['namespace' => 'App\Controllers\API'], function($route
 	$routes->put('estudiante/update/(:num)', 'Estudiante::update/$1');
 	//delete
 	$routes->put('estudiante/delete/(:num)', 'Estudiante::delete/$1');
+
+});
+
+
+
+
+//http://localhost:8080/api/prueba
+$routes->group('api/prueba', ['namespace' => 'App\Controllers\API'], function($routes){
+
+
+	$routes->get('profesor', 'Profesor::index');
+	
+	
+
 
 });
 /**

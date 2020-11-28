@@ -17,7 +17,11 @@ class Validation
 		\CodeIgniter\Validation\FormatRules::class,
 		\CodeIgniter\Validation\FileRules::class,
 		\CodeIgniter\Validation\CreditCardRules::class,
+		\App\Models\CustomRules\MyCustomRules ::class,
 	];
+	
+	
+	
 
 	/**
 	 * Specifies the views that are used to display the
