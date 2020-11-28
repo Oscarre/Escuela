@@ -54,7 +54,7 @@ $routes->group('api', ['namespace' => 'App\Controllers\API'], function($routes){
 });
 
 
-//http://localhost:8080/api/v2/grado
+//http://localhost:8080/api/grado
 $routes->group('api/v2', ['namespace' => 'App\Controllers\API'], function($routes){
 
 	//ruta para grado
@@ -91,16 +91,6 @@ $routes->group('api/v3', ['namespace' => 'App\Controllers\API'], function($route
 
 
 
-//http://localhost:8080/api/prueba
-$routes->group('api/prueba', ['namespace' => 'App\Controllers\API'], function($routes){
-
-
-	$routes->get('profesor', 'Profesor::index');
-	
-	
-
-
-});
 /**
  * --------------------------------------------------------------------
  * Additional Routing

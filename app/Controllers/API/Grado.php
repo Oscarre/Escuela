@@ -1,6 +1,8 @@
 <?php namespace App\Controllers\API;
 
 use App\Models\GradoModel;
+
+use App\Models\EstudianteModel;
 use CodeIgniter\RESTful\ResourceController;
 
 class Grado extends ResourceController
@@ -44,6 +46,11 @@ public function edit($id = null)
         $grado = $this->model->find($id);
         if($grado == null)
         return $this->failNotFound('no se a encontrado un grado con el id:'.$id);
+
+
+        $estudianteModel = new EstudianteModel();
+        $grado["estudiante"] = $estudianteModel->where('grado_id', $grado['id'])->findAll();
+        
         return $this->respond($grado);
 
         }catch (\Exception $e){
